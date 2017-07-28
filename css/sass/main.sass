@@ -22,6 +22,34 @@ body textarea:required:valid
 section, .main_head
 	position: relative
 
+
+// =====sections====
+
+section
+	padding: 70px 0
+	h2
+		text-align: center
+		font-size: 24px
+		text-transform: uppercase
+		margin: 0 0 15px
+
+.s_descr_wrap
+	text-align: center
+.s_descr
+	display: inline-block
+	font-size: 12px
+	text-transform: uppercase
+	position: relative
+	margin-bottom: 130px
+	&::after
+		content: ''
+		width: 150px
+		height: 1px
+		left: 50%
+		margin-left: -75px
+		margin-top: 60px
+		position: absolute
+
 .main_head
 	min-height: 620px
 
@@ -29,10 +57,10 @@ section, .main_head
 	float: left
 	position: relative
 	z-index: 1
-	margin: 15px
+	margin: 15px 0 0 15px
 	img
-		height: 120px
-		width: 120px
+		height: 200px
+		width: 240px
 
 // =======================
 // =========menu==========
@@ -40,18 +68,20 @@ section, .main_head
 
 // menu button
 .toggle_mnu
-	z-index: 2
+	z-index: 3
 	outline: none
-	position: relative
+	position: fixed
 	right: 25px
+	top: 25px
 	border: 0
-	float: right
-	margin: 15px
-	padding: 15px
 	height: 60px
 	width: 60px
+	text-align: center
+	vertical-align: middle
 body
 	background-color: #333
+
+//sandwich
 $w : 32px
 $h : 4px
 .sandwich
@@ -62,7 +92,8 @@ $h : 4px
 	bottom: 0
 	left: 0
 	right: 0
-	margin: 25px
+	margin: 24px
+	border-radius: 4px
 .sw-topper
 	position: relative
 	top: 0
@@ -71,41 +102,40 @@ $h : 4px
 	background: rgb(255, 255, 255)
 	border: none
 	border-radius: 4px 4px 4px 4px
-	transition: transform 0.3s, top 0.1s
-//transition-delay: 0.2s, 0s;
+	//transition: transform 0.3s, top 0.1s
+	//transition-delay: 0.2s, 0s;
 .sw-bottom
 	position: relative
 	width: $w
 	height: $h
-	top: $h * 2
+	top: ($h * 2)
 	background: rgb(255, 255, 255)
 	border: none
 	border-radius: 4px 4px 4px 4px
-	transition: transform 0.3s, top 0.1s
-	transition-delay: 0.1s, 0s
+	//transition: transform 0.3s, top 0.1s
+	//transition-delay: 0.1s, 0s
 .sw-footer
 	position: relative
 	width: $w
 	height: $h
-	top: $h * 4
+	top: ($h * 4)
 	background: rgb(255, 255, 255)
 	border: none
 	border-radius: 4px 4px 4px 4px
-	transition: all 0.3s
-	transition-delay: 0.1s
-
+	//transition: all 0.3s
+	//transition-delay: 0.1s
 .sandwich.active
-	margin: 25px
+	margin: 37px 24px
 	.sw-topper
-		top: 3px
+		top: 2px
 		transform: rotate(140deg)
 	.sw-bottom
-		top: -2px
-		transform: rotate(-140deg)
+		top: -3px
+		transform: rotate(-135deg)
 	.sw-footer
 		opacity: 0
 		top: 0
-		transform: rotate(180deg)
+		transform: rotate(-180deg)
 
 // menu
 .top_mnu
@@ -115,7 +145,7 @@ $h : 4px
 	height: 100%
 	color: #fff
 	background-color: rgba(0, 0, 0, .9)
-	z-index: 1
+	z-index: 2
 	top: 0
 	left: 0
 	ul, li
@@ -129,8 +159,51 @@ $h : 4px
 			display: block
 			padding: 20px
 			text-transform: uppercase
+			-webkit-transition: all 0.5s ease
+			-moz-transition: all 0.5s ease
+			-o-transition: all 0.5s ease
+			transition: all 0.5s ease
+
 		a:hover
-			background-color: rgba(255, 255, 255, .05)
+			background-color: rgba(255, 255, 255, .1)
+
+//top-text
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+	.top_descr
+		display: table-row
+		.top_centred
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			.top_text
+				display: inline-block
+				h1
+					display: inline-block
+					padding: 10px 90px
+					margin: 5px
+					border: 8px solid white
+					font-weight: 700
+					font-size: 3.2em
+					background-color: rgba(0,0,0,.3)
+					-webkit-box-shadow: rgba(0,0,0,.3) 0 0 300px 300px
+					-moz-box-shadow: rgba(0,0,0,.3) 0 0 300px 300px
+					box-shadow: rgba(0,0,0,.3) 0 0 300px 300px
+				p
+					font-size: 1.5em
+					//text-transform: uppercase
+//footer
+.main_footer
+	padding: 30px 0
+	margin-left: -65px
+	font-size: 13px
+
 //parallax
 .parallax-window
 	min-height: 400px

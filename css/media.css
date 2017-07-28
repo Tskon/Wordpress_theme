@@ -17,6 +17,26 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    .top_text h1{
+        padding: 10px 20px !important;
+        font-size: 1.5em !important;
+        border: 4px solid white !important;
+    }
+    .top_wrapper p{
+        font-size: 1em !important;
+        margin: 5px !important;
+    }
+    .toggle_mnu{
+        left: 0!important;
+        top: 0!important;
+    }
+    .logo_container{
+        display: none;
+    }
+    .main_footer{
+        margin-left: 0 !important;
+    }
+
 
 }
 

@@ -1,8 +1,9 @@
 @import "../bourbon/bourbon"
 
 $color: #FF6347
+$color_transparent: rgba(255, 99, 71, 1)
 //Theme skin
-$text_color: #888
+$text_color: #fff
 $main_color: #222
 $bg_light: #FAFAFA
 
@@ -31,13 +32,53 @@ p
 .main_color_bg
   background-color: $main_color
 
+// =====sections====
+.section_lite
+  background-color: $bg_light
+
+.section_dark
+  background-color: $main_color
+  color: $text_color
+  .s_descr::after
+    background-color: $text_color
+section h2
+  +kerning(4)
+
+.s_descr
+  +kerning(4)
+  &::after
+    background-color: $main_color
+
+
 // ======menu======
+.sandwich
+  background-color: $color_transparent
+  box-shadow: $color_transparent 0 -2px 0 5px
+.sandwich_transparent
+  background-color: transparent
+  box-shadow: rgba(0, 0, 0, 0) 0 0 0 5px
+  //-webkit-transition: all 0.5s ease
+  //-moz-transition: all 0.5s ease
+  //-o-transition: all 0.5s ease
+  //transition: all 0.5s ease
 .toggle_mnu
   background-color: transparent
-
+  padding-bottom: 10px
 .top_mnu
   a
     color: #fff
     +kerning(4)
   a:hover
     color: $color
+
+.top_wrapper
+  h1
+    +kerning(12)
+    color: $text_color
+  p
+    +kerning(4)
+    color: $text_color
+
+.main_footer
+  color: $text_color
+  background-color: #000

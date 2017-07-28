@@ -8,18 +8,16 @@ $(document).ready(function() {
         windowHeightDetect();
     });
 
-    // menu
-    // $(".toggle_mnu, .top_mnu a").click(function() {
-    //     $(".sandwich").toggleClass("active");
-    // });
-    $(".toggle_mnu, .top_mnu a").click(function() {
-        $(".sandwich").toggleClass("active");
-        if (!$(".sandwich").is('.active')){
-            $(".top_mnu").fadeOut(300);
-            $(".top_mnu li a").removeClass("fadeInUp animated")
+    $('.toggle_mnu, .top_mnu a').click(function() {
+        $('.sandwich').toggleClass('active');
+        if (!$('.sandwich').is('.active')){
+            $('.top_mnu').fadeOut(300);
+            $('.top_mnu li a').removeClass('fadeInUp animated');
+            $('.sandwich').removeClass('sandwich_transparent');
         } else {
-            $(".top_mnu").fadeIn(300);
-            $(".top_mnu li a").addClass("fadeInUp animated")
+            $('.top_mnu').fadeIn(300);
+            $('.top_mnu li a').addClass('fadeInUp animated');
+            $('.sandwich').addClass('sandwich_transparent');
         }
     });
 
