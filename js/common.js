@@ -9,9 +9,20 @@ $(document).ready(function() {
     });
 
     // menu
-    $("#sandwich, .menu_item").click(function() {
-        $("#sandwich").toggleClass("active");
+    // $(".toggle_mnu, .top_mnu a").click(function() {
+    //     $(".sandwich").toggleClass("active");
+    // });
+    $(".toggle_mnu, .top_mnu a").click(function() {
+        $(".sandwich").toggleClass("active");
+        if (!$(".sandwich").is('.active')){
+            $(".top_mnu").fadeOut(300);
+            $(".top_mnu li a").removeClass("fadeInUp animated")
+        } else {
+            $(".top_mnu").fadeIn(300);
+            $(".top_mnu li a").addClass("fadeInUp animated")
+        }
     });
+
 
 });
 
