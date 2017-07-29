@@ -1,7 +1,7 @@
 @import "../bourbon/bourbon"
 
 $color: #FF6347
-$color_transparent: rgba(255, 99, 71, 1)
+$color_transparent: rgba(255, 99, 71, 0.5)
 //Theme skin
 $text_color: #fff
 $main_color: #222
@@ -35,14 +35,19 @@ p
 // =====sections====
 .section_lite
   background-color: $bg_light
-
+  color: $color
+  p
+    color: $color
+  .s_descr::after
+    background-color: $color
 .section_dark
   background-color: $main_color
   color: $text_color
   .s_descr::after
     background-color: $text_color
-section h2
-  +kerning(4)
+section
+  h2, h3
+    +kerning(4)
 
 .s_descr
   +kerning(4)
@@ -52,8 +57,9 @@ section h2
 
 // ======menu======
 .sandwich
-  background-color: $color_transparent
-  box-shadow: $color_transparent 0 -2px 0 5px
+  background-color: $color
+  box-shadow: $color 0 -2px 0 5px
+
 .sandwich_transparent
   background-color: transparent
   box-shadow: rgba(0, 0, 0, 0) 0 0 0 5px
