@@ -8,6 +8,7 @@ $(document).ready(function() {
         windowHeightDetect();
     });
 
+
     $('.toggle_mnu, .top_mnu a').click(function() {
         $('.sandwich').toggleClass('active');
         if (!$('.sandwich').is('.active')){
@@ -30,4 +31,6 @@ $(window).on('load', function () {
         $spinner   = $preloader.find('.spinner');
     $spinner.fadeOut();
     $preloader.delay(350).fadeOut('slow');
+    $('.top_text h1').animated('zoomIn');
+    $('.top_text p').animated('fadeInUp');
 });
