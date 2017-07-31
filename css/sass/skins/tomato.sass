@@ -3,8 +3,9 @@
 $color: #FF6347
 $color_transparent: rgba(255, 99, 71, 0.5)
 //Theme skin
-$text_color: #fff
+$text_color: #a4a4a4
 $main_color: #222
+
 $bg_light: #FAFAFA
 
 @mixin kerning($kerning)
@@ -13,12 +14,6 @@ $bg_light: #FAFAFA
 body
   color: $main_color
   +kerning(1)
-
-a
-  color: $color
-
-p
-  color: $text_color
 
 .color_element
   color: $color
@@ -32,22 +27,44 @@ p
 .main_color_bg
   background-color: $main_color
 
-// =====sections====
-.section_lite
-  background-color: $bg_light
-  color: $color
+// header
+.top_wrapper
+  h1
+    +kerning(12)
+    color: $bg_light
   p
-    color: $color
-  .s_descr::after
-    background-color: $color
-.section_dark
-  background-color: $main_color
+    +kerning(4)
+    color: $bg_light
+
+.main_footer
   color: $text_color
-  .s_descr::after
-    background-color: $text_color
+  background-color: #000
+
+// =====sections====
 section
+  p, li, h4
+  color: $text_color
   h2, h3
     +kerning(4)
+
+.section_lite
+  background-color: $bg_light
+
+  .s_descr
+    color: $main_color
+    &::after
+      background-color: $main_color
+  h2
+    color: $main_color
+  h3
+    color: $color
+
+.section_dark
+  background-color: $main_color
+  .s_descr, h2
+    color: $bg_light
+  .s_descr::after
+    background-color: $bg_light
 
 .s_descr
   +kerning(4)
@@ -77,14 +94,3 @@ section
   a:hover
     color: $color
 
-.top_wrapper
-  h1
-    +kerning(12)
-    color: $text_color
-  p
-    +kerning(4)
-    color: $text_color
-
-.main_footer
-  color: $text_color
-  background-color: #000

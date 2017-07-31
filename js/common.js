@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     // header resize
     function windowHeightDetect() {
         $('.main_head').css('height', $(window).height());
@@ -7,7 +8,6 @@ $(document).ready(function() {
     $(window).resize(function () {
         windowHeightDetect();
     });
-
 
     $('.toggle_mnu, .top_mnu a').click(function() {
         $('.sandwich').toggleClass('active');
@@ -22,6 +22,10 @@ $(document).ready(function() {
         }
     });
 
+    // $('section *').animated('fadeIn');
+    $('section *').animated('fadeIn');
+
+    $('.popup').magnificPopup({type: 'image'});
 
 });
 
