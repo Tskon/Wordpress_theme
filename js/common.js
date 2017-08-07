@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    if(0 == null) console.log('hi');
     // header resize
     function windowHeightDetect() {
         $('.main_head').css('height', $(window).height());
@@ -22,10 +22,15 @@ $(document).ready(function() {
         }
     });
 
-    // $('section *').animated('fadeIn');
     $('section *').animated('fadeIn');
 
     $('.popup').magnificPopup({type: 'image'});
+
+    // need fix toggle for mixitup
+    // $('#s_howwedo li').click(function () {
+    //     $('#s_howwedo ul li').removeClass('active');
+    //     $(this).addClass('active');
+    // });
 
 });
 
