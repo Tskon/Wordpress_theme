@@ -26,6 +26,8 @@ $(document).ready(function() {
 
     $('.popup').magnificPopup({type: 'image'});
 
+    $('#portfolio_wrapper').mixItUp();
+
     $('#howwedo li').click(function () {
         $('#howwedo li').removeClass('active');
         $(this).addClass('active');
@@ -41,6 +43,5 @@ $(window).on('load', function () {
     $preloader.delay(350).fadeOut('slow');
     $('.top_text h1').animated('zoomIn');
     $('.top_text p').animated('fadeInUp');
-    // need fix toggle for mixitup
 
 });
