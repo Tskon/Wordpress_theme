@@ -26,13 +26,12 @@ $(document).ready(function() {
 
     $('.popup').magnificPopup({type: 'image'});
 
-    // need fix toggle for mixitup
-    // $('#s_howwedo li').click(function () {
-    //     $('#s_howwedo ul li').removeClass('active');
-    //     $(this).addClass('active');
-    // });
-
+    $('#howwedo li').click(function () {
+        $('#howwedo li').removeClass('active');
+        $(this).addClass('active');
+    });
 });
+
 
 // preloader
 $(window).on('load', function () {
@@ -42,4 +41,6 @@ $(window).on('load', function () {
     $preloader.delay(350).fadeOut('slow');
     $('.top_text h1').animated('zoomIn');
     $('.top_text p').animated('fadeInUp');
+    // need fix toggle for mixitup
+
 });
