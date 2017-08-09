@@ -39,6 +39,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    #portfolio_wrapper {
+        min-height: 0 !important;
+    }
     .portfolio_item_content, .portfolio_item_content:hover{
         opacity: 1 !important;
         font-size: 0.8em !important;
