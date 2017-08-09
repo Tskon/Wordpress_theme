@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     if(0 == null) console.log('hi');
     // header resize
     function windowHeightDetect() {
@@ -22,7 +23,7 @@ $(document).ready(function() {
         }
     });
 
-    $('section *').animated('fadeIn');
+    // $('section *:not(.portfolio_item_content)').animated('fadeIn');
 
     $('.popup').magnificPopup({type: 'image'});
 

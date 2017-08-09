@@ -12,11 +12,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
     .top_text h1{
         padding: 10px 20px !important;
         font-size: 1.5em !important;
@@ -37,9 +32,21 @@
         margin-left: 0 !important;
     }
     section{
-        padding: 0 5px !important;
+        padding: 10px 0 !important;
     }
 
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .portfolio_item_content, .portfolio_item_content:hover{
+        opacity: 1 !important;
+        font-size: 0.8em !important;
+        padding-top: 0 !important;
+    }
+    .portfolio_item_content h3{
+        font-size: 1em !important;
+    }
 }
 
 /* Custom, iPhone Retina */
