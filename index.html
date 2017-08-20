@@ -218,21 +218,28 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form action="" class="main_form form-horizontal">
+                    <form action="" class="main_form form-horizontal" novalidate>
+
+                            <label class="control-group">
+                                <span class="color_element">*</span>Ваше имя:
+                                <input type="text" name="name" placeholder="Ваше имя" required data-validation-required-message=
+                                        "Вы не указали имя">
+                                <span class="help-block"></span>
+                            </label>
+
+                            <label class="control-group"><span class="color_element">*</span>Ваш e-mail:
+                                <input type="email" placeholder="Ваш e-mail" required data-validation-required-message=
+                                        "Вы не указали имя e-mail">
+                                <span class="help-block"></span>
+                            </label>
+
                         <label class="control-group">
-                            <span class="color_element">*</span> Ваше имя:
+                            <span class="color_element">*</span>Ваше сообщение:
 
-                            <input type="text" name="name" placeholder="Ваше имя" required>
-
+                            <textarea name="textarea" id="" cols="30" rows="10" data-validation-required-message=
+                                    "Вы не ввели сообщение" required></textarea>
+                            <span class="help-block"></span>
                         </label>
-                        <div class="control-group">
-                            <label class="control-label"><span class="color_element">*</span>Ваш e-mail:</label>
-                            <div class="controls">
-                                <input type="email" placeholder="Ваш e-mail" required>
-                                <p class="help-block"></p>
-                            </div>
-                        </div>
-
                         <button>Отправить</button>
                     </form>
                 </div>
