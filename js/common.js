@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if(0 == null) console.log('hi');
+
     // header resize
     function windowHeightDetect() {
         $('.main_head').css('height', $(window).height());
@@ -10,6 +10,8 @@ $(document).ready(function() {
         windowHeightDetect();
     });
 
+    // animate plugin:
+    //      1.menu button
     $('.toggle_mnu, .top_mnu a').click(function() {
         $('.sandwich').toggleClass('active');
         if (!$('.sandwich').is('.active')){
@@ -22,17 +24,21 @@ $(document).ready(function() {
             $('.sandwich').addClass('sandwich_transparent');
         }
     });
+    //      2.animate sections first look
+    $('section *:not(.portfolio_item_content)').animated('fadeIn');
 
-    // $('section *:not(.portfolio_item_content)').animated('fadeIn');
-
+    // popup modal plugin
     $('.popup').magnificPopup({type: 'image'});
 
+    // mixitup grid (filter) plugin
     $('#portfolio_wrapper').mixItUp();
 
+    // without plugins
     $('#howwedo li').click(function () {
         $('#howwedo li').removeClass('active');
         $(this).addClass('active');
     });
+
 });
 
 

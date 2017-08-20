@@ -61,10 +61,15 @@ section
 
 .section_dark
   background-color: $main_color
-  .s_descr, h2
+  .s_descr, h2, h3
     color: $bg_light
   .s_descr::after
     background-color: $bg_light
+  a
+    color: #fff
+    +kerning(4)
+  a:hover
+    color: $color
 
 .s_descr
   +kerning(4)
@@ -85,6 +90,10 @@ section
       border-color: $color
       color: $color
       outline: none
+
+.phone_number
+  +kerning(2)
+  color: $color
 
 // ======menu======
 .sandwich
