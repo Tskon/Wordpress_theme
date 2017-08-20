@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
 
     // header resize
     function windowHeightDetect() {
@@ -39,6 +38,11 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    //validator
+    $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+
+    //scroll-to-id
+    $(".top_mnu ul a").mPageScroll2id();
 
 });
 
