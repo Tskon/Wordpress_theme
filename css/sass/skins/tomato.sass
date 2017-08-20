@@ -68,7 +68,6 @@ section
   a
     color: $bg_light
     background-color: $color
-    padding: 4px
     +kerning(4)
   a:hover
     color: $color
@@ -95,6 +94,8 @@ section
       color: $color
       outline: none
 
+      
+//contacts
 .phone_number
   +kerning(2)
   color: $color
@@ -102,20 +103,17 @@ section
 .main_form
   button
     background-color: $color
-    border: 0
-    border-radius: 4px
-    margin-top: 10px
+    &:hover
+      color: $color
+      background-color: $bg_light
   color: $bg_light
   input
     color: $color
-    padding: 4px
-    border: 0
-    border-radius: 4px
-    margin: 3px 0
     &:focus
       outline-color: $color
 
-
+.text-danger
+  color: $color
 
 // ======menu======
 .sandwich

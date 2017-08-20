@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
 
     // header resize
     function windowHeightDetect() {
@@ -38,6 +38,7 @@ $(document).ready(function() {
         $('#howwedo li').removeClass('active');
         $(this).addClass('active');
     });
+
 
 });
 
