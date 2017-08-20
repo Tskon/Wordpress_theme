@@ -66,13 +66,17 @@ section
   .s_descr::after
     background-color: $bg_light
   a
-    color: #fff
+    color: $bg_light
+    background-color: $color
+    padding: 4px
     +kerning(4)
   a:hover
     color: $color
+    background-color: $bg_light
 
 .s_descr
   +kerning(4)
+  color: $bg_light
   &::after
     background-color: $main_color
 
@@ -85,7 +89,7 @@ section
   .portfolio_item_content
     +kerning(2)
     h3
-      color: #fff
+      color: $bg_light
     button
       border-color: $color
       color: $color
@@ -94,6 +98,24 @@ section
 .phone_number
   +kerning(2)
   color: $color
+  
+.main_form
+  button
+    background-color: $color
+    border: 0
+    border-radius: 4px
+    margin-top: 10px
+  color: $bg_light
+  input
+    color: $color
+    padding: 4px
+    border: 0
+    border-radius: 4px
+    margin: 3px 0
+    &:focus
+      outline-color: $color
+
+
 
 // ======menu======
 .sandwich
@@ -112,7 +134,7 @@ section
   padding-bottom: 10px
 .top_mnu
   a
-    color: #fff
+    color: $bg_light
     +kerning(4)
   a:hover
     color: $color
